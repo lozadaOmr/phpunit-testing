@@ -1,1 +1,2 @@
-{{ 'This should return a Form for editing existing TODO' }}
+<h1>Do you want to Edit Todo</h1><br>
+{{ $todo }}

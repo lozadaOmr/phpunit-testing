@@ -1,1 +1,3 @@
-{{ 'This should return a listing of all TODO' }}
+@foreach ($todos as $todo)
+	<li>{{ $todo }}</li>
+@endforeach

@@ -1,1 +1,1 @@
-{{ 'This should return a Form for creating new TODO' }}
+<h1>Create new Todo</h1>
