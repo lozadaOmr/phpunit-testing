@@ -2,6 +2,9 @@
 
 class TodosController extends \BaseController {
 
+	protected $all_todo;
+	protected $my_todo;
+
 	/**
 	 * Display a listing of todos
 	 *
@@ -9,7 +12,7 @@ class TodosController extends \BaseController {
 	 */
 	public function index()
 	{
-		return View::make('todos.index');
+		return View::make('todos.index')->with('todos', self::getAllTodo());
 	}
 
 	/**
@@ -29,16 +32,7 @@ class TodosController extends \BaseController {
 	 */
 	public function store()
 	{
-		$validator = Validator::make($data = Input::all(), Todo::$rules);
-
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
-		}
-
-		Todo::create($data);
-
-		return Redirect::route('todos.index');
+		// mock store procedure
 	}
 
 	/**
@@ -49,7 +43,7 @@ class TodosController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		return View::make('todos.show');
+		return View::make('todos.show')->with('todo', self::getMyTodo($id));
 	}
 
 	/**
@@ -60,7 +54,7 @@ class TodosController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		return View::make('todos.edit');
+		return View::make('todos.edit')->with('todo', self::getMyTodo($id));
 	}
 
 	/**
@@ -71,18 +65,7 @@ class TodosController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$todo = Todo::findOrFail($id);
-
-		$validator = Validator::make($data = Input::all(), Todo::$rules);
-
-		if ($validator->fails())
-		{
-			return Redirect::back()->withErrors($validator)->withInput();
-		}
-
-		$todo->update($data);
-
-		return Redirect::route('todos.index');
+		// mock update procedure
 	}
 
 	/**
@@ -93,9 +76,26 @@ class TodosController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		Todo::destroy($id);
-
-		return Redirect::route('todos.index');
+		// mock destroy procedure
 	}
 
+	private function getAllTodo()
+	{
+		return $all_todo = [
+			1 => 'Cook food',
+			2 => 'Do the dishes',
+			3 => 'Clean the houses',
+			4 => 'Buy food'
+		];
+	}
+
+	private function getMyTodo($id)
+	{
+		$my_todo = [
+			1 => 'Cook food',
+			2 => 'Buy food'
+		];
+
+		return $my_todo[$id];
+	}
 }
