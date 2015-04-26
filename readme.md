@@ -24,11 +24,6 @@ phpunit.xml is checked when running `phpunit`
 - To test show() `curl localhost:8000/{id}`
 - To test edit() `curl localhost:8000/{id}/edit`
 
-
-## Mini Cheat Sheet
-
-
-
 ## Reference
 
 Jeffrey Way's [Laravel Testing Decoded](https://leanpub.com/laravel-testing-decoded)
