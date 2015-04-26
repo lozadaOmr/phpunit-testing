@@ -11,10 +11,10 @@ phpunit.xml is checked when running `phpunit`
 
 ## Routes
 
-`/todos` - will display a mock index of todos resource
-`/todos/create` - will display a create todos resources (mock create)
-`/todos/{id}` - will display the specified todos resource (mock show)
-`/todos/{id}/edit` - will display the specified todos resource (mock edit)
+- `/todos` - will display a mock index of todos resource
+- `/todos/create` - will display a create todos resources (mock create)
+- `/todos/{id}` - will display the specified todos resource (mock show)
+- `/todos/{id}/edit` - will display the specified todos resource (mock edit)
 
 
 ## Test
