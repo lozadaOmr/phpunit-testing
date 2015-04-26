@@ -32,7 +32,7 @@ class TodosController extends \BaseController {
 	 */
 	public function store()
 	{
-		// mock store procedure
+		return Redirect::to('todos');
 	}
 
 	/**
@@ -65,7 +65,7 @@ class TodosController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		// mock update procedure
+		return Redirect::route('todos.show', $id);
 	}
 
 	/**
@@ -76,10 +76,15 @@ class TodosController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		// mock destroy procedure
+		return 'destroy todos endpoint';
 	}
 
-	private function getAllTodo()
+	public function session($key, $value)
+	{
+		Session::put($key, $value);
+	}
+
+	public function getAllTodo()
 	{
 		return $all_todo = [
 			1 => 'Cook food',
@@ -89,7 +94,7 @@ class TodosController extends \BaseController {
 		];
 	}
 
-	private function getMyTodo($id)
+	public function getMyTodo($id)
 	{
 		$my_todo = [
 			1 => 'Cook food',
