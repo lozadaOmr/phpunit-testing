@@ -16,4 +16,5 @@ Route::get('/', function()
 	return View::make('hello');
 });
 
-Route::resource('Todos', 'TodosController');
+Route::resource('todos', 'TodosController');
+
