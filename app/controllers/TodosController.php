@@ -9,9 +9,7 @@ class TodosController extends \BaseController {
 	 */
 	public function index()
 	{
-		$todos = Todo::all();
-
-		return View::make('todos.index', compact('todos'));
+		return View::make('todos.index');
 	}
 
 	/**
@@ -51,9 +49,7 @@ class TodosController extends \BaseController {
 	 */
 	public function show($id)
 	{
-		$todo = Todo::findOrFail($id);
-
-		return View::make('todos.show', compact('todo'));
+		return View::make('todos.show');
 	}
 
 	/**
@@ -64,9 +60,7 @@ class TodosController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		$todo = Todo::find($id);
-
-		return View::make('todos.edit', compact('todo'));
+		return View::make('todos.edit');
 	}
 
 	/**
