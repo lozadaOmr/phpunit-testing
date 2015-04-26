@@ -19,17 +19,10 @@ phpunit.xml is checked when running `phpunit`
 
 ## Test
 
-To test index()
-`curl localhost:8000/todos`
-
-To test create()
-`curl localhost:8000/create`
-
-To test show()
-`curl localhost:8000/{id}`
-
-To test edit()
-`curl localhost:8000/{id}/edit`
+- To test index() `curl localhost:8000/todos`
+- To test create() `curl localhost:8000/create`
+- To test show() `curl localhost:8000/{id}`
+- To test edit() `curl localhost:8000/{id}/edit`
 
 
 ## Mini Cheat Sheet
