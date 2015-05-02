@@ -2,6 +2,8 @@
 
 class Todo extends \Eloquent {
 
+	protected $table = 'todos';
+
 	// Add your validation rules here
 	public static $rules = [
 		// 'title' => 'required'
