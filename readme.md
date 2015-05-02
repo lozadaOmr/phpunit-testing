@@ -24,6 +24,31 @@ phpunit.xml is checked when running `phpunit`
 - To test show() `curl localhost:8000/{id}`
 - To test edit() `curl localhost:8000/{id}/edit`
 
+## Test Suites
+
+`phpunit.xml` is arrange to show some probable ways of doing test
+
+To run all test in the directory `app/tests/unit`
+
+- `phpunit --testsuite="unit"`
+
+To run test in `app/tests/unit/controllers`
+
+- `phpunit --testsuite="unit-controllers"`
+
+To run test in `app/tests/unit/models`
+
+- `phpunit --testsuite="unit-models"`
+
+To run test in `app/tests/unit/routes`
+
+- `phpunit --testsuite="unit-routes"`
+
+To run test in `app/tests/unit/views`
+
+- `phpunit --testsuite="unit-views"`
+
+
 ## Reference
 
 Jeffrey Way's [Laravel Testing Decoded](https://leanpub.com/laravel-testing-decoded)
