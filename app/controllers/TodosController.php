@@ -32,6 +32,11 @@ class TodosController extends \BaseController {
 	 */
 	public function store()
 	{
+		$todo = new Todo;
+		$todo->title = Input::get('title');
+		$todo->description = Input::get('description');
+		$todo->save();
+
 		return Redirect::to('todos');
 	}
 
