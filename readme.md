@@ -29,18 +29,23 @@ phpunit.xml is checked when running `phpunit`
 `phpunit.xml` is arrange to show some probable ways of doing test
 
 To run all test in the directory `app/tests/unit`
+
 - `phpunit --testsuite="unit"`
 
 To run test in `app/tests/unit/controllers`
+
 - `phpunit --testsuite="unit-controllers"`
 
 To run test in `app/tests/unit/models`
+
 - `phpunit --testsuite="unit-models"`
 
 To run test in `app/tests/unit/routes`
+
 - `phpunit --testsuite="unit-routes"`
 
 To run test in `app/tests/unit/views`
+
 - `phpunit --testsuite="unit-views"`
 
 
