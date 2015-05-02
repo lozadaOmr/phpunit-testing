@@ -8,6 +8,8 @@ class RoutesTest extends TestCase {
 	 *
 	 * ie. todos/index should be called using get
 	 *     with an expected 200 OK response
+	 *
+	 * this is could be consider sort-of UNIT/Functional test
 	 */
 	public function testTodosIndex()
 	{
