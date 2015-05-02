@@ -60,16 +60,23 @@ class ControllerTest extends TestCase {
 	}
 
 	/**
-	 * Remember test on routes should mainly concert with HTTP responses
-	 * otherwise move checking of redirects or process into a controller test
+	 * Test if TodoController@store works
+	 * just test the redirect part only
 	 */
 	public function testTodosStoreRedirectToIndex()
 	{
-		$crawler = $this->client->request('POST', '/todos');
+		$response = $this->action('POST', 'TodosController@store',
+			['title' => 'test-post',
+			 'description' => 'this is just a description test']);
 
+		// test to make sure we redirect
 		$this->assertRedirectedToRoute('todos.index');
 	}
 
+	/**
+	 * Remember test on routes should mainly concert with HTTP responses
+	 * otherwise move checking of redirects or process into a controller test
+	 */
 	public function testTodosUpdateRedirectToShow()
 	{
 		$crawler = $this->client->request('PATCH', '/todos/1');
